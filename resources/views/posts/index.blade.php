@@ -61,14 +61,14 @@
        <div class=" col-md-6">
            <article class="card d-flex noticias__item">
                <div class="noticias__img">
-                    <a href="{{route('post.show', $post) }}"><img src="{{Storage::url($post->url_thumbail)}}" class="w-100" alt="{{$post->name}}"></a>
+                    <a href="{{route('post.show', $post) }}"><img src="{{Storage::url($post->url_image)}}" class="w-100" alt="{{$post->name}}"></a>
                </div>
                <div class="noticias__txt">
                    <p class="date"><img src="{{ asset('images/ico-calendar.svg')}}">
                        <span class="d-none d-md-inline-block">{{$post->date_public}}</span>
                        <span class="d-inline-block d-md-none">{{$post->date_public}}</span></p>
                    <h1>{{$post->name}}</h1>
-                   <p class="d-md-block d-none">{{ \Illuminate\Support\Str::limit($post->extract, 100, $end='...')}}</p>
+                   <p class="d-md-block d-none">{!! \Illuminate\Support\Str::limit($post->extract, 100, $end='...')!!}</p>
                    <a href="{{route('post.show', $post) }}">Leer más</a>
                </div>
            </article>

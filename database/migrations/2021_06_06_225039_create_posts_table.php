@@ -19,7 +19,6 @@ class CreatePostsTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->date('date_public');
-            $table->string('url_thumbail');
             $table->string('url_image');
             $table->text('extract');
             $table->longText('body');

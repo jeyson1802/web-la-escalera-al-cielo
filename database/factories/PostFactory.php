@@ -30,7 +30,6 @@ class PostFactory extends Factory
             'name' => $name,
             'slug' => Str::slug($name),
             'date_public' => $this->faker->date(),
-            'url_thumbail' => 'posts-thumbail/' . $this->faker->image('public/storage/posts-thumbail', 400, 200, null, false),
             'url_image' => 'posts/' . $this->faker->image('public/storage/posts', 400, 200, null, false),
             'extract' => $this->faker->text(250),
             'body' => $this->faker->text(2000),

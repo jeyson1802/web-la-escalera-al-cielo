@@ -17,8 +17,6 @@ class PostSeeder extends Seeder
     public function run()
     {   
         
-        Storage::deleteDirectory('posts-thumbail');
-        Storage::makeDirectory('posts-thumbail');
         Storage::deleteDirectory('posts');
         Storage::makeDirectory('posts');
         Post::factory(25)->create();
