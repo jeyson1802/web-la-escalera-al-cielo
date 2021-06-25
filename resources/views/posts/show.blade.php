@@ -87,41 +87,25 @@
     </div>
 </div>
 
-<div class="modal fade" id="modal_video" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-    <div class="modal-dialog modal-lg" role="document">
-
-      <div class="modal-content">
-
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle"></h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-
-        <div class="modal-body">
-              
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
-            </div>
-
-        </div>
-
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-  
-      </div>
-
-    </div>
-
-</div> 
-
 </section>
 
 @endsection
 
 @push('scripts')
+<script async charset="utf-8" src="https://cdn.embedly.com/widgets/platform.js"></script>
+<script>
+    document.querySelectorAll( 'oembed[url]' ).forEach( element => {
 
+        const anchor = document.createElement( 'a' );
+
+        anchor.setAttribute( 'href', element.getAttribute( 'url' ) );
+        anchor.setAttribute( 'data-card-width', '854' );
+        anchor.setAttribute( 'data-card-recommend', '0' );
+        anchor.setAttribute( 'data-card-controls', '0' );
+
+        anchor.className = 'embedly-card';
+
+        element.appendChild( anchor );
+    } );
+</script>
 @endpush

@@ -9,7 +9,7 @@ body{
     color: #707070;
 }
 
-h2{
+.encabezado h2{
     color: #fff;
     font-size: 27px;
     letter-spacing: 1px;
@@ -926,4 +926,14 @@ cursor: pointer;
 
 .img-post {
     width: 100%;
+}
+
+blockquote {
+    overflow: hidden;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    margin-left: 0;
+    margin-right: 0;
+    font-style: italic;
+    border-left: 5px solid #ccc;
 }
