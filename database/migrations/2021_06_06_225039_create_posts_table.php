@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->date('date_public');
-            $table->string('url_image');
+            $table->string('url_image')->nullable();
             $table->text('extract');
             $table->longText('body');
             $table->enum('status', [1,2])->default(1);

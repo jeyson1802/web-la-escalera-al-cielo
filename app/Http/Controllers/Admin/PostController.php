@@ -44,8 +44,6 @@ class PostController extends Controller
     public function store(Request $request)
     {   
 
-        $url = Storage::put('posts', $request->file('url_image'));
-        
         $request->validate([
             'name' => 'required',
             'slug' => 'required|unique:posts'
@@ -56,13 +54,18 @@ class PostController extends Controller
             'name' => $request->name,
             'slug' => $request->slug,
             'date_public' => $request->date_public,
-            'url_image' => $url,
             'extract' => $request->extract,
             'body' => $request->body,
             'status' => $request->status,
             'category_id' => $request->category_id,
             'user_id' => $request->user_id
         ]);
+
+        if($request->file('url_image')) {
+
+            $url = Storage::put('posts', $request->file('url_image'));
+            $post->update(['url_image' => $url]);
+        }
 
         return redirect()->route('admin.posts.edit', $post)->with('info', 'El post se creó con éxito');
     }
@@ -85,8 +88,10 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Post $post)
-    {
-        return view('admin.posts.edit', compact('post'));
+    {   
+        $categories = Category::pluck('name', 'id');
+
+        return view('admin.posts.edit', compact('post', 'categories'));
     }
 
     /**
@@ -97,13 +102,36 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Post $post)
-    {
+    {           
+
         $request->validate([
             'name' => "required|unique:posts,name,$post->id",
             'slug' => "required|unique:posts,slug,$post->id"
         ]);
 
-        $post->update($request->all());
+        $post->update([
+            'name' => $request->name,
+            'slug' => $request->slug,
+            'date_public' => $request->date_public,
+            'extract' => $request->extract,
+            'body' => $request->body,
+            'status' => $request->status,
+            'category_id' => $request->category_id,
+            'user_id' => $request->user_id
+        ]);
+
+        if($request->file('url_image')) {
+
+            $url = Storage::put('posts', $request->file('url_image'));
+
+            if($post->url_image) {
+                Storage::delete($post->url_image);
+            }
+
+            $post->update(['url_image' => $url]);
+                    
+            
+        }
 
         return redirect()->route('admin.posts.edit', $post)->with('info', 'El post se actualizó con éxito');
     }
@@ -115,7 +143,9 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(Post $post)
-    {
+    {   
+        Storage::delete($post->url_image);
+
         $post->delete();
 
         return redirect()->route('admin.posts.index')->with('info', 'El post se eliminó con éxito');

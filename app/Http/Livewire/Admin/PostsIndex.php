@@ -23,8 +23,6 @@ class PostsIndex extends Component
     {   
         $query = Post::query();
 
-        $query->where("status", 2);
-
         $query->where("name", 'LIKE', '%'. $this->search . '%');
 
         $posts = $query->latest('id')->paginate(8);

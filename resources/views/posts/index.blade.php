@@ -61,7 +61,12 @@
        <div class=" col-md-6">
            <article class="card d-flex noticias__item">
                <div class="noticias__img">
-                    <a href="{{route('post.show', $post) }}"><img src="{{Storage::url($post->url_image)}}" class="w-100" alt="{{$post->name}}"></a>
+                    <a href="{{route('post.show', $post) }}">
+                    @if($post->url_image) 
+                        <img src="{{Storage::url($post->url_image)}}" class="w-100" alt="{{$post->name}}">
+                    @else 
+                        <img src="https://www.tulliluce.it/wp-content/uploads/2014/12/demo-2-400x200.png" class="w-100" alt="{{$post->name}}">
+                    @endif
                </div>
                <div class="noticias__txt">
                    <p class="date"><img src="{{ asset('images/ico-calendar.svg')}}">
