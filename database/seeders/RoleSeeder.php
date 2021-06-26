@@ -21,14 +21,18 @@ class RoleSeeder extends Seeder
 
         Permission::create(['name' => 'admin.index'])->syncRoles([$role_admin, $role_blogger]);
 
-        Permission::create(['name' => 'admin.categories.index'])->assignRole($role_admin);
+        Permission::create(['name' => 'admin.categories.index'])->assignRole($role_admin, $role_blogger);
         Permission::create(['name' => 'admin.categories.create'])->assignRole($role_admin);
         Permission::create(['name' => 'admin.categories.edit'])->assignRole($role_admin);
-        Permission::create(['name' => 'admin.categories.delete'])->assignRole($role_admin);
+        Permission::create(['name' => 'admin.categories.destroy'])->assignRole($role_admin);
 
         Permission::create(['name' => 'admin.posts.index'])->syncRoles([$role_admin, $role_blogger]);
         Permission::create(['name' => 'admin.posts.create'])->syncRoles([$role_admin, $role_blogger]);
         Permission::create(['name' => 'admin.posts.edit'])->syncRoles([$role_admin, $role_blogger]);
         Permission::create(['name' => 'admin.posts.destroy'])->syncRoles([$role_admin, $role_blogger]);
+
+        Permission::create(['name' => 'admin.users.index'])->assignRole($role_admin);
+        Permission::create(['name' => 'admin.users.edit'])->assignRole($role_admin);
+
     }
 }
