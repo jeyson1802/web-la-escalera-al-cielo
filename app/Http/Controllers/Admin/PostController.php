@@ -144,7 +144,10 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {   
-        Storage::delete($post->url_image);
+        
+        if($post->url_image) {
+            Storage::delete($post->url_image);
+        }
 
         $post->delete();
 
