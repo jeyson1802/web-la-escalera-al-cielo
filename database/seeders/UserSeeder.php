@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
             'name' => 'Jeyson Junior Ventura Aguilar',
             'email' => 'jeysonv.sis@gmail.com',
             'password' => bcrypt('untecs18')
-        ]);
+        ])->assignRole('Admin');
 
         User::factory(99)->create();
     }

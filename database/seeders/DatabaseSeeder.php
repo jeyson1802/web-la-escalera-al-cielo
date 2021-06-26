@@ -23,6 +23,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {   
 
+        $this->call(RoleSeeder::class);
+        
         $this->call(UserSeeder::class);
 
         Storage::deleteDirectory('socials-icon');
@@ -49,7 +51,7 @@ class DatabaseSeeder extends Seeder
 
         Category::factory(7)->create();
 
-        Video::factory(25)->create();
+        Video::factory(25)->create();        
 
         $this->call(PostSeeder::class);
 

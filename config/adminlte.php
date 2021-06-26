@@ -251,6 +251,12 @@ return [
             'route'       => 'admin.index',
             'icon'        => 'fas fa-tachometer-alt fa-fw'
         ],
+        ['header' => 'SEGURIDAD'],
+        [
+            'text'        => 'Lista de Usuarios',
+            'route'       => 'admin.users.index',
+            'icon'        => 'fas fa-fw fa-users'
+        ],
         ['header' => 'ADMINISTRADOR'],
         [
             'text' => 'Categorías',
