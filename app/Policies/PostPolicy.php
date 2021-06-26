@@ -10,14 +10,14 @@ class PostPolicy
 {
     use HandlesAuthorization;
 
-    /**
-     * Create a new policy instance.
-     *
-     * @return void
-     */
     public function author(User $user, Post $post){
 
         return true;
         return $user->id == $post->user_id;
+    }
+
+    public function published(?User $user, Post $post){
+
+        return 2 == $post->status;
     }
 }

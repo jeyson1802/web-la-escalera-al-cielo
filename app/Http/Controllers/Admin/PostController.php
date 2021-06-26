@@ -106,6 +106,8 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {           
 
+        $this->authorize('author', $post);
+
         $request->validate([
             'name' => "required|unique:posts,name,$post->id",
             'slug' => "required|unique:posts,slug,$post->id"
@@ -146,6 +148,8 @@ class PostController extends Controller
     public function destroy(Post $post)
     {   
 
+        $this->authorize('author', $post);
+        
         $post->delete();
 
         return redirect()->route('admin.posts.index')->with('info', 'El post se eliminó con éxito');

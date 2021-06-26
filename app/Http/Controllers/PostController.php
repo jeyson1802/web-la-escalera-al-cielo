@@ -56,6 +56,8 @@ class PostController extends Controller
 
     public function show(Post $post) {
 
+        $this->authorize('published', $post);
+
         $query_posts = Post::query();
         $query_posts->where("status", 2);
         $posts = $query_posts->latest('id')->take(3)->get();
