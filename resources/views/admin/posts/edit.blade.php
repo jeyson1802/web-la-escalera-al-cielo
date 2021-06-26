@@ -18,9 +18,7 @@
     <div class="card-body">
         
         {!! Form::model($post, ['route' => ['admin.posts.update', $post], 'method' => 'put', 'files' => true]) !!}
-
-            {!! Form::hidden('user_id', auth()->user()->id) !!}
-
+            
             @include('admin.posts.partials.form')
 
             {!! Form::submit('Actualizar Post', ['class' => 'btn btn-primary pull-right']) !!}

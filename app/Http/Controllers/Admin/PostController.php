@@ -57,8 +57,7 @@ class PostController extends Controller
             'extract' => $request->extract,
             'body' => $request->body,
             'status' => $request->status,
-            'category_id' => $request->category_id,
-            'user_id' => $request->user_id
+            'category_id' => $request->category_id
         ]);
 
         if($request->file('url_image')) {
@@ -116,8 +115,7 @@ class PostController extends Controller
             'extract' => $request->extract,
             'body' => $request->body,
             'status' => $request->status,
-            'category_id' => $request->category_id,
-            'user_id' => $request->user_id
+            'category_id' => $request->category_id
         ]);
 
         if($request->file('url_image')) {
@@ -144,10 +142,6 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {   
-        
-        if($post->url_image) {
-            Storage::delete($post->url_image);
-        }
 
         $post->delete();
 
