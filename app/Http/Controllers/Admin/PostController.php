@@ -88,6 +88,9 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {   
+
+        $this->authorize('author', $post);
+
         $categories = Category::pluck('name', 'id');
 
         return view('admin.posts.edit', compact('post', 'categories'));
