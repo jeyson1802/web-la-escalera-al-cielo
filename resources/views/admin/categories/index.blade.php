@@ -17,7 +17,7 @@
 <div class="card">
     <div class="card-header">
         @can('admin.categories.create')
-            <a class="btn btn-primary btn-sm" href="{{route('admin.categories.create')}}">Agregar categoría</a>
+            <a class="btn btn-secondary float-right" href="{{route('admin.categories.create')}}">Agregar categoría</a>
         @endcan        
     </div>
     <div class="card-body">
@@ -36,7 +36,7 @@
                     <td>{{$category->name}}</td>
                     <td>
                         @can('admin.categories.edit')
-                            <a class="btn btn-primary btn-sm" href="{{route('admin.categories.edit', $category)}}">Editar</a>
+                            <a class="btn btn-primary" href="{{route('admin.categories.edit', $category)}}">Editar</a>
                         @endcan       
                     </td>
                     <td>
@@ -44,7 +44,7 @@
                             <form action="{{route('admin.categories.destroy', $category)}}" method="POST">
                                 @csrf
                                 @method('delete')
-                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
                             </form>
                         @endcan   
                     </td>

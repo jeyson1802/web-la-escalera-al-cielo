@@ -252,29 +252,34 @@ return [
             'icon'        => 'fas fa-tachometer-alt fa-fw',
             'can'         => 'admin.index'
         ],
-        ['header' => 'SEGURIDAD', 'can'=> 'admin.users.index'],
+        ['header' => 'SEGURIDAD', 'can'=> ['admin.users.index', 'admin.roles.index'] ],
         [
             'text'        => 'Lista de Usuarios',
             'route'       => 'admin.users.index',
             'icon'        => 'fas fa-fw fa-users',
             'can'         => 'admin.users.index'
         ],
-        ['header' => 'ADMINISTRADOR'],
+        [
+            'text'        => 'Lista de Roles',
+            'route'       => 'admin.roles.index',
+            'icon'        => 'fas fa-fw fa-user-cog',
+            'can'         => 'admin.roles.index'
+        ],
+        ['header' => 'OPCIONES DE BLOG', 'can'=> ['admin.categories.index','admin.posts.index', 'admin.posts.create']],
         [
             'text' => 'Categorías',
             'route'  => 'admin.categories.index',
             'icon' => 'fab fa-fw fa-buffer',
             'can'   => 'admin.categories.index'
         ],
-        ['header' => 'OPCIONES DE BLOG'],
         [
-            'text'       => 'Lista de post',
+            'text'       => 'Lista de Post',
             'route'      => 'admin.posts.index',
             'icon'       => 'fas fa-fw fa-clipboard',
             'can'         => 'admin.posts.index'
         ],
         [
-            'text'       => 'Crear nuevo post',
+            'text'       => 'Crear nuevo Post',
             'route'      => 'admin.posts.create',
             'icon'       => 'fas fa-fw fa-file',
             'can'         => 'admin.posts.create'

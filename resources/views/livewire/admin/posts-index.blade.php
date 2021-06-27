@@ -25,13 +25,13 @@
                         <th scope="row">{{$post->id}}</th>
                         <td>{{$post->name}}</td>
                         <td>
-                            <a class="btn btn-primary btn-sm" href="{{route('admin.posts.edit', $post)}}">Editar</a>
+                            <a class="btn btn-primary" href="{{route('admin.posts.edit', $post)}}">Editar</a>
                         </td>
                         <td>
                             <form action="{{route('admin.posts.destroy', $post)}}" method="POST">
                                 @csrf
                                 @method('delete')
-                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
                             </form>
                         </td>
                     </tr>
