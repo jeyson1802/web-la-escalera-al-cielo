@@ -18,7 +18,7 @@ class CreateDocumentsTable extends Migration
             $table->id();
             $table->string('name');
             $table->date('date_public');
-            $table->string('url_file');
+            $table->string('url_file')->nullable();
             $table->enum('status', [1,2])->default(1);
 
             $table->unsignedBigInteger('category_id');

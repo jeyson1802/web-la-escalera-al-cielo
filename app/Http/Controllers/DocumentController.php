@@ -17,6 +17,8 @@ class DocumentController extends Controller
 
         $query->where("status", 2);
 
+        $query->whereNotNull('url_file');
+
         if($request->has('category_id')) {
 
             $category_id = $request->get('category_id');

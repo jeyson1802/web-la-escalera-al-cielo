@@ -34,6 +34,11 @@
             width: 100%;
             height: 100%;
         }
+        
+        .form-group small {
+            font-size: 100% !important;
+            font-weight: bold !important;
+        }
     </style>
 @endsection
 

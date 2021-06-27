@@ -52,7 +52,10 @@ class PostController extends Controller
 
         $request->validate([
             'name' => 'required',
-            'slug' => 'required|unique:posts'
+            'slug' => 'required|unique:posts',
+            'url_image' => 'required',
+            'extract' => 'required',
+            'body' => 'required'
         ]);
 
         $post = Post::create([
@@ -105,7 +108,9 @@ class PostController extends Controller
 
         $request->validate([
             'name' => "required|unique:posts,name,$post->id",
-            'slug' => "required|unique:posts,slug,$post->id"
+            'slug' => "required|unique:posts,slug,$post->id",
+            'extract' => 'required',
+            'body' => 'required'
         ]);
 
         $post->update([

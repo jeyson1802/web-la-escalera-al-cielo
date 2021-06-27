@@ -265,13 +265,14 @@ return [
             'icon'        => 'fas fa-fw fa-user-cog',
             'can'         => 'admin.roles.index'
         ],
-        ['header' => 'OPCIONES DE BLOG', 'can'=> ['admin.categories.index','admin.posts.index', 'admin.posts.create']],
+        ['header' => 'ADMINISTRACIÓN', 'can'=> 'admin.categories.index' ],
         [
             'text' => 'Categorías',
             'route'  => 'admin.categories.index',
             'icon' => 'fab fa-fw fa-buffer',
             'can'   => 'admin.categories.index'
         ],
+        ['header' => 'OPCIONES DE BLOG', 'can'=> ['admin.posts.index', 'admin.posts.create']],        
         [
             'text'       => 'Lista de Post',
             'route'      => 'admin.posts.index',
@@ -283,6 +284,19 @@ return [
             'route'      => 'admin.posts.create',
             'icon'       => 'fas fa-fw fa-file',
             'can'         => 'admin.posts.create'
+        ],
+        ['header' => 'OPCIONES DE DOCUMENTOS', 'can'=> ['admin.documents.index', 'admin.documents.create']],        
+        [
+            'text'       => 'Lista de Documentos',
+            'route'      => 'admin.documents.index',
+            'icon'       => 'fas fa-fw fa-clipboard',
+            'can'         => 'admin.documents.index'
+        ],
+        [
+            'text'       => 'Crear nuevo Documento',
+            'route'      => 'admin.documents.create',
+            'icon'       => 'fas fa-fw fa-file',
+            'can'         => 'admin.documents.create'
         ]
     ],
 
