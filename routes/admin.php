@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\DocumentController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\VideoController;
 
 Route::get('/', [HomeController::class , 'index'])->middleware('can:admin.index')->name('admin.index');
 
@@ -19,3 +20,5 @@ Route::resource('categories', CategoryController::class)->except('show')->names(
 Route::resource('posts', PostController::class)->except('show')->names('admin.posts');
 
 Route::resource('documents', DocumentController::class)->except('show')->names('admin.documents');
+
+Route::resource('videos', VideoController::class)->except('show')->names('admin.videos');

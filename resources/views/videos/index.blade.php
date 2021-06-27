@@ -87,7 +87,7 @@
         @foreach ($posts as $post)
             <article class="card d-flex noticias__item">
                 <div class="noticias__img">
-                    <img href="/post/{{$post->id}}"><img src="{{Storage::url($post->url_thumbail)}}" class="w-100" alt="{{$post->name}}">
+                    <img href="/post/{{$post->id}}"><img src="{{Storage::url($post->url_image)}}" class="w-100" alt="{{$post->name}}">
                 </div>
                 <div class="noticias__txt">
                     <p class="date"><img src="{{ asset('images/ico-calendar.svg')}}">

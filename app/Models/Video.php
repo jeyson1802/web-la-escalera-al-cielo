@@ -9,6 +9,8 @@ class Video extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];  
+
     // Relacion muchos a uno inversa
     public function category() {
         return $this->belongsTo(Category::class);

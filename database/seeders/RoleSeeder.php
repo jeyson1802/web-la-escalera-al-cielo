@@ -19,8 +19,9 @@ class RoleSeeder extends Seeder
         $role_admin = Role::create(['name' => 'Admin']);
         $role_blogger = Role::create(['name' => 'Blogger']);
         $role_documentador = Role::create(['name' => 'Documentador']);
+        $role_videos = Role::create(['name' => 'Gestor de Videos']);
 
-        Permission::create(['name' => 'admin.index','description' => 'Ver Dashboard'])->syncRoles([$role_admin, $role_blogger]);
+        Permission::create(['name' => 'admin.index','description' => 'Ver Dashboard'])->syncRoles([$role_admin, $role_blogger, $role_documentador, $role_videos]);
 
         Permission::create(['name' => 'admin.categories.index','description' => 'Ver Listado de Categorías'])->assignRole($role_admin, $role_blogger);
         Permission::create(['name' => 'admin.categories.create','description' => 'Crear Categoría'])->assignRole($role_admin);
@@ -41,6 +42,11 @@ class RoleSeeder extends Seeder
         Permission::create(['name' => 'admin.documents.create','description' => 'Crear Documento'])->syncRoles([$role_admin, $role_documentador]);
         Permission::create(['name' => 'admin.documents.edit','description' => 'Editar Documento'])->syncRoles([$role_admin, $role_documentador]);
         Permission::create(['name' => 'admin.documents.destroy','description' => 'Eliminar Documento'])->syncRoles([$role_admin, $role_documentador]);
+
+        Permission::create(['name' => 'admin.videos.index','description' => 'Ver Listado de Videos'])->syncRoles([$role_admin, $role_videos]);
+        Permission::create(['name' => 'admin.videos.create','description' => 'Crear Video'])->syncRoles([$role_admin, $role_videos]);
+        Permission::create(['name' => 'admin.videos.edit','description' => 'Editar Video'])->syncRoles([$role_admin, $role_videos]);
+        Permission::create(['name' => 'admin.videos.destroy','description' => 'Eliminar Video'])->syncRoles([$role_admin, $role_videos]);
 
         Permission::create(['name' => 'admin.users.index','description' => 'Ver Listado de Usuarios'])->assignRole($role_admin);
         Permission::create(['name' => 'admin.users.edit','description' => 'Editar Usuario'])->assignRole($role_admin);

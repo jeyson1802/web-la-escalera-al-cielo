@@ -297,6 +297,19 @@ return [
             'route'      => 'admin.documents.create',
             'icon'       => 'fas fa-fw fa-file',
             'can'         => 'admin.documents.create'
+        ],
+        ['header' => 'OPCIONES DE VIDEOS', 'can'=> ['admin.videos.index', 'admin.videos.create']],        
+        [
+            'text'       => 'Lista de Videos',
+            'route'      => 'admin.videos.index',
+            'icon'       => 'fas fa-fw fa-clipboard',
+            'can'         => 'admin.videos.index'
+        ],
+        [
+            'text'       => 'Crear nuevo Video',
+            'route'      => 'admin.videos.create',
+            'icon'       => 'fas fa-fw fa-file',
+            'can'         => 'admin.videos.create'
         ]
     ],
 
