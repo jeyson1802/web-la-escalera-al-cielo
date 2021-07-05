@@ -58,7 +58,7 @@
 
 <section class="row noticias--big">
    @foreach ($posts as $post)
-       <div class=" col-md-6">
+       <div class="col-md-6">
            <article class="card d-flex noticias__item">
                <div class="noticias__img">
                     <a href="{{route('post.show', $post) }}">

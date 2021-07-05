@@ -113,7 +113,7 @@ INSERT INTO web_la_escalera_al_cielo.countries (id, name, slug, url_flag, url_fi
 
 INSERT INTO web_la_escalera_al_cielo.countries (id, name, slug, url_flag, url_firm, email, phone, address, schedule, created_at, updated_at) VALUES (17, 'El Salvador', 'el-salvador', 'countries-flag/el-salvador.png', 'countries-firm/el-salvador.png', 'info@minpaes.org', '-', '-', '-', '2021-06-27 20:53:44', '2021-06-27 20:53:44');
 
-INSERT INTO web_la_escalera_al_cielo.countries (id, name, slug, url_flag, url_firm, email, phone, address, schedule, created_at, updated_at) VALUES (18, 'Argentina', 'argentina', 'countries-flag/argentina.png', 'countries-firm/argentina.png', 'juanmanuelpirillo@mail.com', '+54 91151807003', '-', '-', '2021-06-27 20:53:44');
+INSERT INTO web_la_escalera_al_cielo.countries (id, name, slug, url_flag, url_firm, email, phone, address, schedule, created_at, updated_at) VALUES (18, 'Argentina', 'argentina', 'countries-flag/argentina.png', 'countries-firm/argentina.png', 'juanmanuelpirillo@mail.com', '+54 91151807003', '-', '-', '2021-06-27 20:53:44', '2021-06-27 20:53:44');
 
 INSERT INTO web_la_escalera_al_cielo.countries (id, name, slug, url_flag, url_firm, email, phone, address, schedule, created_at, updated_at) VALUES (19, 'Ecuador', 'ecuador', 'countries-flag/ecuador.png', 'countries-firm/ecuador.png', 'carlostorreshuacon@gmail.com', '968445803', '-', '-', '2021-06-27 20:53:44', '2021-06-27 20:53:44');
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PersonController;
@@ -20,11 +21,25 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class , 'index'])->name('home.index');
 
+Route::get('/quienessomos', [HomeController::class , 'quienessomos'])->name('home.quienessomos');
+
+Route::get('/misionvision', [HomeController::class , 'misionvision'])->name('home.misionvision');
+
+Route::get('/organigrama', [HomeController::class , 'organigrama'])->name('home.organigrama');
+
+Route::get('/preguntasfrecuentes', [HomeController::class , 'preguntasfrecuentes'])->name('home.preguntasfrecuentes');
+
+Route::get('/', [HomeController::class , 'index'])->name('home.index');
+
 Route::get('/autocomplete',[HomeController::class, 'autocomplete'])->name('home.autocomplete');
 
 Route::get('/person/{country}', [PersonController::class , 'show'])->name('person.show');
 
 Route::post('/person', [PersonController::class , 'store'])->name('person.store');
+
+Route::get('/contacto', [ContactoController::class , 'show'])->name('contacto.show');
+
+Route::post('/contacto', [ContactoController::class , 'store'])->name('contacto.store');
 
 Route::get('/post', [PostController::class , 'index'])->name('post.index');
 

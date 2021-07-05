@@ -10,18 +10,17 @@
           <li><a href="#" class="header__list">Organización</a>
               <div class="submenu">
                   <ul>
-                      <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
-                      <li><a href="mision-vision.html">Misión y visión</a></li>
-                      <li><a href="organigrama.html">Organigrama</a></li>
+                      <li><a href="{{ route('home.quienessomos') }}">¿Quiénes somos?</a></li>
+                      <li><a href="{{ route('home.misionvision') }}">Misión y visión</a></li>
+                      <li><a href="{{ route('home.organigrama') }}">Organigrama</a></li>
                   </ul>
               </div>
           </li>
           <li><a href="{{ route('post.index') }}" class="header__list">Noticias</a></li>
           <li><a href="{{ route('document.index') }}" class="header__list">Transcripciones</a></li>
           <li><a href="{{ route('video.index') }}" class="header__list">Transmisiones</a></li>
-          <li><a href="testimonios.html" class="header__list">Testimonios</a></li>
-          <li><a href="preguntas-frecuentes.html" class="header__list">Preguntas frecuentes</a></li>
-          <li><a href="contacto.html" class="header__list">Contacto</a></li>
+          <li><a href="{{ route('home.preguntasfrecuentes') }}"" class="header__list">Preguntas frecuentes</a></li>
+          <li><a href="{{ route('contacto.show') }}" class="header__list">Contacto</a></li>
       </ul>
   </nav>
 </header>

@@ -15,6 +15,7 @@
     <p><strong>Dirección: </strong> {{$person->address}}</p>
     <p><strong>Cómo conoció el Ministerio: </strong> {{$person->answer}}</p>
     <p><strong>Fecha de Nacimiento: </strong> {{$person->date_birth}}</p>
+    <p><strong>País: </strong> {{$person->country->name}}</p>
     <br>
     <p>Bendecido día.</p>
 </body>
