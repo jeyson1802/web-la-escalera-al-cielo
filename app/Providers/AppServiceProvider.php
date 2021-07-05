@@ -29,7 +29,11 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
+    {   
+        if($this->app->environment('production')) {
+            url()->forceScheme('https');
+        }
+        
         Paginator::useBootstrap();
         Post::observe(PostObserver::class);
         Document::observe(DocumentObserver::class);
