@@ -17,8 +17,8 @@ services:
         networks:
             - sail
         depends_on:
-            - mysql
-    mysql:
+            - mysql.laescaleraalcielo
+    mysql.laescaleraalcielo:
         image: 'mysql:8.0'
         ports:
             - '3306'
