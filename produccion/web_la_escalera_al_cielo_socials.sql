@@ -1,0 +1,7 @@
+INSERT INTO web_la_escalera_al_cielo.socials (id, name, slug, url_icon, created_at, updated_at) VALUES (1, 'facebook', 'facebook', 'socials-icon/ico-facebook.svg', '2021-06-27 20:53:36', '2021-06-27 20:53:36');
+INSERT INTO web_la_escalera_al_cielo.socials (id, name, slug, url_icon, created_at, updated_at) VALUES (2, 'instagram', 'instagram', 'socials-icon/ico-ig.svg', '2021-06-27 20:53:36', '2021-06-27 20:53:36');
+INSERT INTO web_la_escalera_al_cielo.socials (id, name, slug, url_icon, created_at, updated_at) VALUES (3, 'whatsapp', 'whatsapp', 'socials-icon/ico-whatsapp.svg', '2021-06-27 20:53:36', '2021-06-27 20:53:36');
+INSERT INTO web_la_escalera_al_cielo.socials (id, name, slug, url_icon, created_at, updated_at) VALUES (4, 'twitter', 'twitter', 'socials-icon/ico-twitter.svg', '2021-06-27 20:53:36', '2021-06-27 20:53:36');
+INSERT INTO web_la_escalera_al_cielo.socials (id, name, slug, url_icon, created_at, updated_at) VALUES (5, 'youtube', 'youtube', 'socials-icon/ico-youtube.svg', '2021-06-27 20:53:36', '2021-06-27 20:53:36');
+INSERT INTO web_la_escalera_al_cielo.socials (id, name, slug, url_icon, created_at, updated_at) VALUES (6, 'telegram', 'telegram', 'socials-icon/ico-telegram.svg', '2021-06-27 20:53:36', '2021-06-27 20:53:36');
+INSERT INTO web_la_escalera_al_cielo.socials (id, name, slug, url_icon, created_at, updated_at) VALUES (7, 'periscope', 'periscope', 'socials-icon/ico-periscope.svg', '2021-06-27 20:53:36', '2021-06-27 20:53:36');

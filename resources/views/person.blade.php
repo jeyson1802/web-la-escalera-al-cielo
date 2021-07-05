@@ -82,7 +82,7 @@
             <div class="card-body mensaje text-center">
                 <div class="mensaje__redes text-center">
                     @foreach ($country->socials()->get() as $social) 
-                        <a href="{{$social->pivot->link}}"> <img src="{{Storage::url($social->url_icon)}}" alt="" /> </a>
+                        <a href="{{$social->pivot->link}}" target="_blank"> <img src="{{Storage::url($social->url_icon)}}"/> </a>
                     @endforeach
                 </div>
 
