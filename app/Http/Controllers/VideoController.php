@@ -47,7 +47,7 @@ class VideoController extends Controller
             
         }
 
-        $videos = $query->latest('id')->paginate(9);
+        $videos = $query->latest('date_public')->paginate(9);
 
         $query_posts = Post::query();
         $query_posts->where("status", 2);
