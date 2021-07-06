@@ -7,7 +7,7 @@
 @section('detalle.encabezado', 'Bienvenido al Ministerio de Arrepentimiento y Santidad')
 
 @section('breadcrumb')
-    <a href="{{ route('home.index') }}"><span>Inicio</span> </a> >  <span class="activo">Organigrama</span>     
+    <a href="{{ route('home.index') }}"><span>Inicio</span> </a> >  <span>Organización</span>     >  <span class="activo">Organigrama</span>     
 @endsection
 
 

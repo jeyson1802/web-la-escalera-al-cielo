@@ -13,6 +13,8 @@ function inicializarComponentes() {
 }
 function activarEstiloOpcionSeleccionado() {
 
+    debugger;
+
     var pathName = $(location).attr('pathname');
   
     if(pathName == '/') {
@@ -24,6 +26,11 @@ function activarEstiloOpcionSeleccionado() {
     var arrayPathName = pathName.split('/');
     var opcion = arrayPathName[1];
     $(".header__list.activo").removeClass("activo");
-    $("#url-" + opcion).addClass("activo");
+    if(opcion === 'quienessomos' || opcion === 'misionvision' || opcion === 'organigrama') {
+      $("#url-organizacion").addClass("activo");
+    } else {
+      $("#url-" + opcion).addClass("activo");
+    }
+    
     
 }
