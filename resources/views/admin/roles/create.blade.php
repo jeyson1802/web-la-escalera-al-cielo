@@ -1,5 +1,5 @@
 @extends('adminlte::page')
-@section('title', 'Coders free')
+@section('title', 'Seguridad')
 
 @section('content_header')
     <h1>Crear Rol</h1>

@@ -2,7 +2,7 @@
 
 @section('title', 'Contacto')
 
-@section('encabezado', 'Contacto')
+@section('encabezado', 'Sede Regional - Lima - Perú')
 
 @section('detalle.encabezado', 'Bienvenido al Ministerio de Arrepentimiento y Santidad')
 
@@ -10,8 +10,14 @@
     <a href="{{ route('home.index') }}"><span>Inicio</span> </a> >  <span class="activo">Contacto</span>     
 @endsection
 
-
 @section('content')
+
+<div class="row">
+
+    <div class="img-container col-md-12 col-12">
+        <img src="{{ asset('images/sede-central.png')}}" class="img-sede">
+    </div>                   
+</div>
 
 <div class="row">
     <div class="col-md-8 col-12 mb-5 mb-md-0">
@@ -107,3 +113,38 @@
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1950.693917445343!2d-76.972967!3d-12.08558!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb720f2d7088ba893!2sEdificio%20Omega!5e0!3m2!1ses-419!2spe!4v1625522820868!5m2!1ses-419!2spe" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
 @endsection
+
+
+@push('css')
+
+    <style>
+
+        .img-container {
+            overflow: hidden;
+            height: 200px;
+            max-height: 300px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        @media screen and (min-width: 34.5625em) {
+            .img-container {
+                overflow: hidden;
+                height: 500px;
+                max-height: 500px;
+                position: relative;
+                margin-bottom: 20px;
+            }
+        }
+
+        .img-sede {
+                display: block;
+                width: 100%;
+                height: auto;
+                position: unset;
+                bottom: 0;
+        }
+
+        
+
+    </style>
+@endpush

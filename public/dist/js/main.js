@@ -12,9 +12,7 @@ function inicializarComponentes() {
   
 }
 function activarEstiloOpcionSeleccionado() {
-
-    debugger;
-
+  
     var pathName = $(location).attr('pathname');
   
     if(pathName == '/') {
