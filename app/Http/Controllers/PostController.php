@@ -47,7 +47,7 @@ class PostController extends Controller
             
         }
 
-        $posts =$query->latest('id')->paginate(6);
+        $posts =$query->latest('date_public')->paginate(6);
 
         $categories = Category::all();
 
@@ -60,11 +60,11 @@ class PostController extends Controller
 
         $query_posts = Post::query();
         $query_posts->where("status", 2);
-        $posts = $query_posts->latest('id')->take(3)->get();
+        $posts = $query_posts->latest('date_public')->take(3)->get();
 
         $query_documents = Document::query();
         $query_documents->where("status", 2);
-        $documents = $query_documents->latest('id')->take(4)->get();
+        $documents = $query_documents->latest('date_public')->take(4)->get();
 
         return view('posts.show', compact('post', 'posts', 'documents'));
     }

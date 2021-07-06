@@ -49,12 +49,12 @@ class DocumentController extends Controller
             
         }
 
-        $documents = $query->latest('id')->paginate(8);
+        $documents = $query->latest('date_public')->paginate(8);
 
         $query_posts = Post::query();
         $query_posts->where("status", 2);
 
-        $posts = $query_posts->latest('id')->take(3)->get();
+        $posts = $query_posts->latest('date_public')->take(3)->get();
 
         $categories = Category::all();
 

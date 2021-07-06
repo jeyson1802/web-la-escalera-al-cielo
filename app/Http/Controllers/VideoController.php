@@ -52,7 +52,7 @@ class VideoController extends Controller
         $query_posts = Post::query();
         $query_posts->where("status", 2);
 
-        $posts = $query_posts->latest('id')->take(3)->get();
+        $posts = $query_posts->latest('date_public')->take(3)->get();
 
         $categories = Category::all();
 
