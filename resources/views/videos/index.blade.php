@@ -163,7 +163,12 @@
             modal.find(".modal-body iframe").attr("src", src);
             modal.find(".modal-header h5").text(title);
         });
-  
+        
+        modal_video.on('hidden.bs.modal', function () {
+            var modal = $(this);
+            modal.find(".modal-body iframe").attr("src", '');
+        });
+
     }
       
   </script>

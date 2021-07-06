@@ -64,8 +64,10 @@ class VideoController extends Controller
         } 
 
         if(Str::contains($url_video, 'vimeo')) {
-            $url_video_id = $url_video_array[3];
-            $url_thumbail = 'https://i.vimeocdn.com/video/'.$url_video_id.'_480x360';
+            $url_video_id = $url_video_array[4];
+            $hash = unserialize(file_get_contents("https://vimeo.com/api/v2/video/".$url_video_id.".php"));
+            $url_thumbail_preview = $hash[0]['thumbnail_large'];
+            $url_thumbail = substr_replace( $url_thumbail_preview, "480x360", -3);
         } 
 
         $video = Video::create([
@@ -119,8 +121,10 @@ class VideoController extends Controller
         } 
 
         if(Str::contains($url_video, 'vimeo')) {
-            $url_video_id = $url_video_array[3];
-            $url_thumbail = 'https://i.vimeocdn.com/video/'.$url_video_id.'_480x360';
+            $url_video_id = $url_video_array[4];
+            $hash = unserialize(file_get_contents("https://vimeo.com/api/v2/video/".$url_video_id.".php"));
+            $url_thumbail_preview = $hash[0]['thumbnail_large'];
+            $url_thumbail = substr_replace( $url_thumbail_preview, "480x360", -3);
         } 
 
         $video->update([
