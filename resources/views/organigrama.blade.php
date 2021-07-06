@@ -26,7 +26,8 @@
                         <h3>Organigrama de Departamentos</h3>
                         <p>Organigrama con los líderes encargados de cada departamento para América Latina</p>
                         <img src="{{ asset('images/organigrama_02.png')}}" class="img-post mb-md-5 mb-3 img-fluid" alt="">
-                        <p>Organigrama Visión Ministerial</p>
+                        <h3>Organigrama Visión Ministerial</h3>
+                        <p>Organigrama de la Visión Ministerial para América Latina</p>
                         <img src="{{ asset('images/organigrama_05.png')}}" class="img-post mb-md-5 mb-3 img-fluid" alt="">
                         <h3>Organigrama de Medios y Comunicaciones</h3>
                         <p>Organigrama con los líderes encargados del área de Medios y Comunicaciones</p>
