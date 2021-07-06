@@ -1,6 +1,6 @@
 @extends('layouts.home')
 
-@section('title', 'Inicio - MINPAES')
+@section('title', 'Inicio - La Escalera al Cielo')
 
 @section('content')
 
