@@ -19,6 +19,7 @@
             <a href="https://api.whatsapp.com/send?phone=51922774790" target="_blank" > <img src="images/ico-whatsapp.svg" /> </a>
             <a href="https://twitter.com/ArrepienteteRd" target="_blank" > <img src="images/ico-twitter.svg" /> </a>
             <a href="https://vimeo.com/user140572643" target="_blank" > <img src="images/ico-youtube.svg" /> </a>
+            <a href="https://www.tiktok.com/@repentlatinoamerica" target="_blank" > <img src="images/ico-tiktok.svg" /> </a>
         </div>
     </div>
 </div>
