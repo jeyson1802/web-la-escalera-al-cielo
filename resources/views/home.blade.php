@@ -15,7 +15,6 @@
        <span> Síguenos en redes sociales</span>
         <div class="mt-md-3">
             <a href="https://www.facebook.com/arrepentimientoPeru" target="_blank" > <img src="images/ico-facebook.svg"/> </a>
-            <a href="https://www.instagram.com/msantolatino" target="_blank" > <img src="images/ico-ig.svg" /> </a>
             <a href="https://api.whatsapp.com/send?phone=51906335546" target="_blank" > <img src="images/ico-whatsapp.svg" /> </a>
             <a href="https://twitter.com/msantolatino" target="_blank" > <img src="images/ico-twitter.svg" /> </a>
             <a href="https://www.youtube.com/@MinisterioSantoAmericaLatina" target="_blank" > <img src="images/ico-youtube.svg" /> </a>
