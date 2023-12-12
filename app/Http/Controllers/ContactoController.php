@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Mail;
 class ContactoController extends Controller
 {
     public function show() {
-        
+
         //Perú
         $country = Country::find(1);
 
@@ -19,7 +19,7 @@ class ContactoController extends Controller
     }
 
     public function store(Request $request) {
-        
+
         $contacto= new Contacto();
 
         $contacto->name = $request->name;
@@ -27,8 +27,8 @@ class ContactoController extends Controller
         $contacto->email = $request->email;
         $contacto->phone = $request->phone;
         $contacto->message = $request->message;
-        
-        Mail::to('info@minpaes.org')->send(new MailRegistroContacto($contacto));
+
+        Mail::to('ministeriosantoamericalatina@gmail.com')->send(new MailRegistroContacto($contacto));
 
         //Perú
         $country = Country::find(1);
