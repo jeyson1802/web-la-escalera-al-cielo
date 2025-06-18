@@ -1,8 +1,8 @@
 <header>
   <h1 class="logo"><a href="{{ route('home.index') }}"><img src="{{ asset('images/logo-americalatina.png')}}" alt="América Latina"></a></h1>
   <input type="checkbox" name="menu" id="menu">
-  <label class="nav" for="menu"> 
-      <span></span> 
+  <label class="nav" for="menu">
+      <span></span>
   </label>
   <nav class="navigation">
       <ul>
@@ -16,6 +16,7 @@
                   </ul>
               </div>
           </li>
+          <li><a id="url-radio" href="{{ route('home.radio') }}" class="header__list">Radio</a></li>
           <li><a id="url-post" href="{{ route('post.index') }}" class="header__list">Noticias</a></li>
           <li><a id="url-document" href="{{ route('document.index') }}" class="header__list">Transcripciones</a></li>
           <li><a id="url-video" href="{{ route('video.index') }}" class="header__list">Transmisiones</a></li>

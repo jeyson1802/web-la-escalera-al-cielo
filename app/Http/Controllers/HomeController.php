@@ -14,9 +14,9 @@ class HomeController extends Controller
 
         return view('home', compact('countries'));
     }
-    
+
     public function autocomplete(Request $request) {
-        
+
         $search_text = $request->get('country');
 
         $countries_data = Country::where('name', 'LIKE', '%'. $search_text. '%')->get();
@@ -25,7 +25,7 @@ class HomeController extends Controller
     }
 
     public function quienessomos() {
-        
+
         $query_posts = Post::query();
         $query_posts->where("status", 2);
         $posts = $query_posts->latest('id')->take(3)->get();
@@ -58,6 +58,14 @@ class HomeController extends Controller
         $posts = $query_posts->latest('id')->take(3)->get();
 
         return view('preguntasfrecuentes', compact('posts'));
+    }
+
+    public function radio() {
+
+        //Perú
+        $country = Country::find(1);
+
+        return view('radio', compact('country'));
     }
 
 }

@@ -27,6 +27,8 @@ Route::get('/misionvision', [HomeController::class , 'misionvision'])->name('hom
 
 Route::get('/organigrama', [HomeController::class , 'organigrama'])->name('home.organigrama');
 
+Route::get('/radio', [HomeController::class , 'radio'])->name('home.radio');
+
 Route::get('/preguntasfrecuentes', [HomeController::class , 'preguntasfrecuentes'])->name('home.preguntasfrecuentes');
 
 Route::get('/', [HomeController::class , 'index'])->name('home.index');
